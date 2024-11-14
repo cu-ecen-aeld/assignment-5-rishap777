@@ -6,7 +6,7 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-AESD_ASSIGNMENTS_VERSION = 'c26febdb2b1c97f3815d3f8263acd13349ea02b3'
+AESD_ASSIGNMENTS_VERSION = '6df17a97e78f2ac51909ee0ba9c06656025b13a1'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -15,8 +15,8 @@ AESD_ASSIGNMENTS_SITE_METHOD = git
 AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
 
 define AESD_ASSIGNMENTS_BUILD_CMDS
-	
-	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/server all
+
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) ARCH=aarch64 CROSS_COMPILE='/home/rishap/Downloads/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc' -C $(@D)/server all
 endef
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
