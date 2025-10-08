@@ -16,7 +16,7 @@ AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
 
 define AESD_ASSIGNMENTS_BUILD_CMDS
 
-	$(MAKE) $(TARGET_CONFIGURE_OPTS) ARCH=aarch64 CROSS_COMPILE=/home/rishapi/Downloads/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc -C $(@D)/server all
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) ARCH=aarch64 CROSS_COMPILE=/__w/assignment-5-rishap777/assignment-5-rishap777/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc -C $(@D)/server all
 endef
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
